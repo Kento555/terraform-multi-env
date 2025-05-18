@@ -49,8 +49,8 @@ jobs:
       - name: Terraform apply
         run: terraform apply -var-file=${{ github.event.inputs.choice }}.tfvars -auto-approve
 
-      - name: Pause 3min to verify bucket creation
-        run: sleep 180
+      # - name: Pause 3min to verify bucket creation
+      #   run: sleep 180
 
-      - name: Terraform destroy
-        run: terraform destroy -var-file=${{ github.event.inputs.choice }}.tfvars -auto-approve
+      # - name: Terraform destroy
+      #   run: terraform destroy -var-file=${{ github.event.inputs.choice }}.tfvars -auto-approve
